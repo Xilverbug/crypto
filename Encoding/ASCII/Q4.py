@@ -1,2 +1,2 @@
-msg = "I Love Mongolia"
+msg = b"I Love Mongolia"
 
