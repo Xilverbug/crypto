@@ -1,0 +1,1 @@
+msg = "I Love Mongolia"

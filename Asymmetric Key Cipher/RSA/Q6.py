@@ -1,0 +1,10 @@
+from Crypto.Util.number import *
+# bytes_to_long , long_to_bytes
+# Public Key :  e, n
+# Private Key : d, n
+
+n = 882564595536224140639625987659416029426239230804614613279163
+d = 121832886702415731577073962957377780195510499965398469843281 
+e = 65537
+
+msg = "Hello World"
