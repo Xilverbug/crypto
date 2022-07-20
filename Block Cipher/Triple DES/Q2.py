@@ -3,7 +3,6 @@ import os
 from Crypto.Cipher import DES3
 from Crypto.Util.Padding import pad
 
-
 IV = os.urandom(8)
 SECRET = 'des_weak_key_crypto'
 
@@ -23,14 +22,11 @@ def encrypt(key, plaintext):
 
 
 def encrypt_flag(key):
-    print(SECRET.encode())
-    print(key)
     return encrypt(key, pad(SECRET.encode(), 8).hex())
 
 
-key = b"DESKEYDA"
+key = b"DESKEYDA12345678"
 
 flag = encrypt_flag(key.hex())
-print(type(flag), flag)
 cipher = encrypt(key.hex(), flag)
 print(bytes.fromhex(cipher))
