@@ -1,7 +1,12 @@
-from Crypto.Cipher import DES
+import os
+from Crypto.Cipher import DES3
+from Crypto.Util.Padding import pad, unpad
 
-key = "1234567812345678"
-cipher = DES.new(key, DES.MODE_ECB)
+key = b"DESKEYDA12345678"
+cipher = DES3.new(key, DES3.MODE_ECB)
 
-# cipher.encrypt
-# cipher.decrypt
+enc = cipher.encrypt(pad(b'TEST', 16))
+print(enc)
+
+text = cipher.decrypt(enc)
+print(unpad(text, 16))
