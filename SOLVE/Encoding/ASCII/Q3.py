@@ -1,0 +1,4 @@
+hexstr = "4153434949206973206120372d62697420456e636f64696e67"
+
+str = bytes.fromhex(hexstr)
+print(str)
